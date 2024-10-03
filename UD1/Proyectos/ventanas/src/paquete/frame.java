@@ -87,7 +87,6 @@ public class frame extends javax.swing.JFrame {
         ventana1 v1 = new ventana1();
         escritorio.add(v1);
         v1.setVisible(true);
-        v1.
     }//GEN-LAST:event_abrirVentana1ActionPerformed
 
     private void abrirVentana2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abrirVentana2ActionPerformed
