@@ -1,0 +1,2 @@
+Se llama 
+Es javax.swing.ButtonGroup@68945ec7Sus aficiones son java.awt.List[list0,0,0,0x0,invalid,selected=null]
