@@ -30,6 +30,7 @@ public class frame1 extends javax.swing.JFrame {
 
     public frame1() {
         initComponents();
+        setTitle("Formulario");
 
     }
 
@@ -187,7 +188,7 @@ public class frame1 extends javax.swing.JFrame {
                     writer.append("\nSu sexo es: " + botonHombre.getText());
                 } else if (botonMujer.isSelected()) {
                     writer.append("\nSu sexo es: " + botonMujer.getText());
-                } else writer.append("\nNo has seleccionado ningun sexo");
+                } else writer.append("\nNo has seleccionado ningún sexo");
 
                 writer.append("\nTus actividades favoritas son: ");
                 int contador = 0;
@@ -202,6 +203,9 @@ public class frame1 extends javax.swing.JFrame {
                 }
 
                 writer.close();
+
+                JOptionPane.showMessageDialog(null, "El archivo se ha guardado correctamente", "Archivo guardado", JOptionPane.INFORMATION_MESSAGE);
+
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(frame1.class.getName()).log(Level.SEVERE, null, ex);
             }
