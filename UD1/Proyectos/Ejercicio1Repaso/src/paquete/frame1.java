@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -29,6 +30,7 @@ public class frame1 extends javax.swing.JFrame {
 
     public frame1() {
         initComponents();
+
     }
 
     /**
@@ -169,16 +171,36 @@ public class frame1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    ArrayList<String> listaActividades = new ArrayList<>();
+
     private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
         int seleccion = jFileChooser1.showSaveDialog(botonGuardar);
         if (seleccion == 0){
             try {
                 PrintWriter writer = null;
                 File archivo = jFileChooser1.getSelectedFile();
+
                 writer = new PrintWriter(archivo);
-                writer.append(campoNombre.getText() + " " + campoApellidos.getText());
-                writer.append(buttonGroup1.getSelection().toString());
-                
+                writer.append("Tu nombre es: " + campoNombre.getText() + " " + campoApellidos.getText());
+
+                if (botonHombre.isSelected()) {
+                    writer.append("\nSu sexo es: " + botonHombre.getText());
+                } else if (botonMujer.isSelected()) {
+                    writer.append("\nSu sexo es: " + botonMujer.getText());
+                } else writer.append("\nNo has seleccionado ningun sexo");
+
+                writer.append("\nTus actividades favoritas son: ");
+                int contador = 0;
+                for (String a : listaActividades) {
+                    contador += 1;
+                    writer.append(a);
+
+                    if (contador == listaActividades.size()) {
+                        break;
+                    }
+                    writer.append(", ");
+                }
+
                 writer.close();
             } catch (FileNotFoundException ex) {
                 Logger.getLogger(frame1.class.getName()).log(Level.SEVERE, null, ex);
@@ -188,20 +210,26 @@ public class frame1 extends javax.swing.JFrame {
 
     private void checkCineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkCineActionPerformed
         // TODO add your handling code here:
+        listaActividades.add(checkCine.getText());
+
     }//GEN-LAST:event_checkCineActionPerformed
 
     private void checkViajesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkViajesActionPerformed
         // TODO add your handling code here:
+        listaActividades.add(checkViajes.getText());
 
     }//GEN-LAST:event_checkViajesActionPerformed
 
     private void checkLecturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkLecturaActionPerformed
         // TODO add your handling code here:
+        listaActividades.add(checkLectura.getText());
 
     }//GEN-LAST:event_checkLecturaActionPerformed
 
     private void checkDeporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkDeporteActionPerformed
         // TODO add your handling code here:
+        listaActividades.add(checkDeporte.getText());
+
 
     }//GEN-LAST:event_checkDeporteActionPerformed
 
