@@ -47,10 +47,10 @@ public class Ej1 extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        spinerWriting = new javax.swing.JSpinner();
-        spinerSpeaking = new javax.swing.JSpinner();
-        spinerReading = new javax.swing.JSpinner();
-        spinerListening = new javax.swing.JSpinner();
+        spinerWritingCam = new javax.swing.JSpinner();
+        spinerSpeakingCam = new javax.swing.JSpinner();
+        spinerReadingCam = new javax.swing.JSpinner();
+        spinerListeningCam = new javax.swing.JSpinner();
         botonNotaCam = new javax.swing.JButton();
         panelEOI = new javax.swing.JPanel();
         radioB1EOI = new javax.swing.JRadioButton();
@@ -61,11 +61,11 @@ public class Ej1 extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        spinerWriting1 = new javax.swing.JSpinner();
-        spinerSpeaking1 = new javax.swing.JSpinner();
-        spinerReading1 = new javax.swing.JSpinner();
-        spinerListening1 = new javax.swing.JSpinner();
-        spinerMediation = new javax.swing.JSpinner();
+        spinerWritingEOI = new javax.swing.JSpinner();
+        spinerSpeakingEOI = new javax.swing.JSpinner();
+        spinerReadingEOI = new javax.swing.JSpinner();
+        spinerListeningEOI = new javax.swing.JSpinner();
+        spinerMediationEOI = new javax.swing.JSpinner();
         botonNotaEOI = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -157,40 +157,45 @@ public class Ej1 extends javax.swing.JFrame {
 
         jLabel7.setText("Nota listening");
 
-        spinerWriting.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerWritingCam.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerWritingStateChanged(evt);
+                spinerWritingCamStateChanged(evt);
             }
         });
 
-        spinerSpeaking.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerSpeakingCam.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerSpeakingStateChanged(evt);
+                spinerSpeakingCamStateChanged(evt);
             }
         });
 
-        spinerReading.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerReadingCam.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerReadingStateChanged(evt);
+                spinerReadingCamStateChanged(evt);
             }
         });
 
-        spinerListening.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerListeningCam.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerListeningStateChanged(evt);
+                spinerListeningCamStateChanged(evt);
             }
         });
 
         botonNotaCam.setText("Calcular nota");
+        botonNotaCam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNotaCamActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelNotasCamLayout = new javax.swing.GroupLayout(panelNotasCam);
         panelNotasCam.setLayout(panelNotasCamLayout);
         panelNotasCamLayout.setHorizontalGroup(
             panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelNotasCamLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
+                .addGap(47, 47, 47)
                 .addComponent(botonNotaCam, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
             .addGroup(panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panelNotasCamLayout.createSequentialGroup()
                     .addContainerGap()
@@ -201,36 +206,36 @@ public class Ej1 extends javax.swing.JFrame {
                         .addComponent(jLabel4))
                     .addGap(54, 54, 54)
                     .addGroup(panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(spinerWriting)
-                        .addComponent(spinerSpeaking)
-                        .addComponent(spinerReading)
-                        .addComponent(spinerListening, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerWritingCam)
+                        .addComponent(spinerSpeakingCam)
+                        .addComponent(spinerReadingCam)
+                        .addComponent(spinerListeningCam, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(78, Short.MAX_VALUE)))
         );
         panelNotasCamLayout.setVerticalGroup(
             panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNotasCamLayout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
+                .addContainerGap(199, Short.MAX_VALUE)
                 .addComponent(botonNotaCam, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
+                .addGap(24, 24, 24))
             .addGroup(panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panelNotasCamLayout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel4)
-                        .addComponent(spinerWriting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerWritingCam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(spinerSpeaking, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerSpeakingCam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel6)
-                        .addComponent(spinerReading, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerReadingCam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(panelNotasCamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel7)
-                        .addComponent(spinerListening, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerListeningCam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(106, Short.MAX_VALUE)))
         );
 
@@ -288,38 +293,43 @@ public class Ej1 extends javax.swing.JFrame {
 
         jLabel12.setText("Nota mediation");
 
-        spinerWriting1.setModel(new javax.swing.SpinnerNumberModel(0.0d, null, null, 1.0d));
-        spinerWriting1.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerWritingEOI.setModel(new javax.swing.SpinnerNumberModel(0.0d, null, null, 1.0d));
+        spinerWritingEOI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerWriting1StateChanged(evt);
+                spinerWritingEOIStateChanged(evt);
             }
         });
 
-        spinerSpeaking1.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerSpeakingEOI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerSpeaking1StateChanged(evt);
+                spinerSpeakingEOIStateChanged(evt);
             }
         });
 
-        spinerReading1.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerReadingEOI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerReading1StateChanged(evt);
+                spinerReadingEOIStateChanged(evt);
             }
         });
 
-        spinerListening1.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerListeningEOI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerListening1StateChanged(evt);
+                spinerListeningEOIStateChanged(evt);
             }
         });
 
-        spinerMediation.addChangeListener(new javax.swing.event.ChangeListener() {
+        spinerMediationEOI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                spinerMediationStateChanged(evt);
+                spinerMediationEOIStateChanged(evt);
             }
         });
 
         botonNotaEOI.setText("Calcular nota");
+        botonNotaEOI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonNotaEOIActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelNotasEOILayout = new javax.swing.GroupLayout(panelNotasEOI);
         panelNotasEOI.setLayout(panelNotasEOILayout);
@@ -333,15 +343,15 @@ public class Ej1 extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelNotasEOILayout.createSequentialGroup()
                                 .addComponent(jLabel9)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(spinerSpeaking1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(spinerSpeakingEOI, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelNotasEOILayout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addGap(46, 46, 46)
-                                .addComponent(spinerMediation, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(spinerMediationEOI, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panelNotasEOILayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addGap(48, 48, 48)
                         .addComponent(botonNotaEOI, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
             .addGroup(panelNotasEOILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panelNotasEOILayout.createSequentialGroup()
                     .addContainerGap()
@@ -351,9 +361,9 @@ public class Ej1 extends javax.swing.JFrame {
                         .addComponent(jLabel8))
                     .addGap(56, 56, 56)
                     .addGroup(panelNotasEOILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(spinerWriting1)
-                        .addComponent(spinerReading1)
-                        .addComponent(spinerListening1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerWritingEOI)
+                        .addComponent(spinerReadingEOI)
+                        .addComponent(spinerListeningEOI, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(78, Short.MAX_VALUE)))
         );
         panelNotasEOILayout.setVerticalGroup(
@@ -362,11 +372,11 @@ public class Ej1 extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addGroup(panelNotasEOILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(spinerSpeaking1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spinerSpeakingEOI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                 .addGroup(panelNotasEOILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(spinerMediation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spinerMediationEOI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(botonNotaEOI, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
@@ -375,15 +385,15 @@ public class Ej1 extends javax.swing.JFrame {
                     .addContainerGap()
                     .addGroup(panelNotasEOILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel8)
-                        .addComponent(spinerWriting1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerWritingEOI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(62, 62, 62)
                     .addGroup(panelNotasEOILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel10)
-                        .addComponent(spinerReading1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerReadingEOI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(18, 18, 18)
                     .addGroup(panelNotasEOILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel11)
-                        .addComponent(spinerListening1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(spinerListeningEOI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(140, Short.MAX_VALUE)))
         );
 
@@ -437,7 +447,7 @@ public class Ej1 extends javax.swing.JFrame {
 
     private void campoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombreActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_campoNombreActionPerformed
 
     private void campoNombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_campoNombreMouseClicked
@@ -453,129 +463,185 @@ public class Ej1 extends javax.swing.JFrame {
     private void radioB1CamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioB1CamActionPerformed
         // TODO add your handling code here:
         panelNotasCam.setVisible(true);
-        
+
         SpinnerNumberModel spB1 = new SpinnerNumberModel();
         spB1.setMinimum(0);
         spB1.setMaximum(170);
-        spinerListening.setModel(spB1);
-        
+        spinerListeningCam.setModel(spB1);
+
         SpinnerNumberModel spB11 = new SpinnerNumberModel();
         spB11.setMinimum(0);
         spB11.setMaximum(170);
-        spinerReading.setModel(spB11);
-        
+        spinerReadingCam.setModel(spB11);
+
         SpinnerNumberModel spB12 = new SpinnerNumberModel();
         spB12.setMinimum(0);
         spB12.setMaximum(170);
-        spinerSpeaking.setModel(spB12);
-        
+        spinerSpeakingCam.setModel(spB12);
+
         SpinnerNumberModel spB13 = new SpinnerNumberModel();
         spB13.setMinimum(0);
         spB13.setMaximum(170);
-        spinerWriting.setModel(spB13);
-        
+        spinerWritingCam.setModel(spB13);
+
     }//GEN-LAST:event_radioB1CamActionPerformed
 
     private void radioB2CamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioB2CamActionPerformed
         // TODO add your handling code here:
         panelNotasCam.setVisible(true);
-        
+
         SpinnerNumberModel spB2 = new SpinnerNumberModel();
         spB2.setMinimum(0);
         spB2.setMaximum(190);
-        spinerListening.setModel(spB2);
-        
+        spinerListeningCam.setModel(spB2);
+
         SpinnerNumberModel spB21 = new SpinnerNumberModel();
         spB21.setMinimum(0);
         spB21.setMaximum(190);
-        spinerReading.setModel(spB21);
-        
+        spinerReadingCam.setModel(spB21);
+
         SpinnerNumberModel spB22 = new SpinnerNumberModel();
         spB22.setMinimum(0);
         spB22.setMaximum(190);
-        spinerSpeaking.setModel(spB22);
-        
+        spinerSpeakingCam.setModel(spB22);
+
         SpinnerNumberModel spB23 = new SpinnerNumberModel();
         spB23.setMinimum(0);
         spB23.setMaximum(190);
-        spinerWriting.setModel(spB23);
+        spinerWritingCam.setModel(spB23);
     }//GEN-LAST:event_radioB2CamActionPerformed
 
-    private void spinerWritingStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerWritingStateChanged
+    private void spinerWritingCamStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerWritingCamStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerWritingStateChanged
+    }//GEN-LAST:event_spinerWritingCamStateChanged
 
-    private void spinerSpeakingStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerSpeakingStateChanged
+    private void spinerSpeakingCamStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerSpeakingCamStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerSpeakingStateChanged
+    }//GEN-LAST:event_spinerSpeakingCamStateChanged
 
-    private void spinerReadingStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerReadingStateChanged
+    private void spinerReadingCamStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerReadingCamStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerReadingStateChanged
+    }//GEN-LAST:event_spinerReadingCamStateChanged
 
-    private void spinerListeningStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerListeningStateChanged
+    private void spinerListeningCamStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerListeningCamStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerListeningStateChanged
+    }//GEN-LAST:event_spinerListeningCamStateChanged
 
-    private void spinerWriting1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerWriting1StateChanged
+    private void spinerWritingEOIStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerWritingEOIStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerWriting1StateChanged
+    }//GEN-LAST:event_spinerWritingEOIStateChanged
 
-    private void spinerSpeaking1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerSpeaking1StateChanged
+    private void spinerSpeakingEOIStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerSpeakingEOIStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerSpeaking1StateChanged
+    }//GEN-LAST:event_spinerSpeakingEOIStateChanged
 
-    private void spinerReading1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerReading1StateChanged
+    private void spinerReadingEOIStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerReadingEOIStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerReading1StateChanged
+    }//GEN-LAST:event_spinerReadingEOIStateChanged
 
-    private void spinerListening1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerListening1StateChanged
+    private void spinerListeningEOIStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerListeningEOIStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerListening1StateChanged
+    }//GEN-LAST:event_spinerListeningEOIStateChanged
 
-    private void spinerMediationStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerMediationStateChanged
+    private void spinerMediationEOIStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_spinerMediationEOIStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_spinerMediationStateChanged
+    }//GEN-LAST:event_spinerMediationEOIStateChanged
 
     private void radioB1EOIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioB1EOIActionPerformed
         // TODO add your handling code here:
         panelNotasEOI.setVisible(true);
-        
+
         SpinnerNumberModel spB1E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerListening1.setModel(spB1E);
-        
+        spinerListeningEOI.setModel(spB1E);
+
         SpinnerNumberModel spB11E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerReading1.setModel(spB11E);
-        
+        spinerReadingEOI.setModel(spB11E);
+
         SpinnerNumberModel spB12E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerSpeaking1.setModel(spB12E);
-        
+        spinerSpeakingEOI.setModel(spB12E);
+
         SpinnerNumberModel spB13E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerWriting1.setModel(spB13E);
-        
+        spinerWritingEOI.setModel(spB13E);
+
         SpinnerNumberModel spB14E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerMediation.setModel(spB14E);
+        spinerMediationEOI.setModel(spB14E);
     }//GEN-LAST:event_radioB1EOIActionPerformed
 
     private void radioB2EOIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioB2EOIActionPerformed
         // TODO add your handling code here:
         panelNotasEOI.setVisible(true);
-        
+
         SpinnerNumberModel spB2E = new SpinnerNumberModel(0.0, 0.0, 10, 0.1);
-        spinerListening1.setModel(spB2E);
-        
+        spinerListeningEOI.setModel(spB2E);
+
         SpinnerNumberModel spB21E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerReading1.setModel(spB21E);
-        
+        spinerReadingEOI.setModel(spB21E);
+
         SpinnerNumberModel spB22E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerSpeaking1.setModel(spB22E);
-        
+        spinerSpeakingEOI.setModel(spB22E);
+
         SpinnerNumberModel spB23E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerWriting1.setModel(spB23E);
-        
+        spinerWritingEOI.setModel(spB23E);
+
         SpinnerNumberModel spB24E = new SpinnerNumberModel(0.0, 0.0, 10.0, 0.1);
-        spinerMediation.setModel(spB24E);
+        spinerMediationEOI.setModel(spB24E);
     }//GEN-LAST:event_radioB2EOIActionPerformed
+
+    private void botonNotaCamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNotaCamActionPerformed
+        // TODO add your handling code here:
+        Integer notaListening = (Integer) spinerListeningCam.getValue();
+        Integer notaReading = (Integer) spinerReadingCam.getValue();
+        Integer notaWriting = (Integer) spinerWritingCam.getValue();
+        Integer notaSpeaking = (Integer) spinerSpeakingCam.getValue();
+
+        Integer notaMedia = (notaListening + notaReading + notaWriting + notaSpeaking) / 4;
+
+        String nivelIngles = "";
+
+        if (notaMedia >= 120 && notaMedia <= 139) {
+            nivelIngles = "Nivel A2";
+        } else if (notaMedia >= 140 && notaMedia <= 159) {
+            nivelIngles = "Nivel B1";
+        } else if (notaMedia >= 160 && notaMedia <= 179) {
+            nivelIngles = "Nivel B2";
+        } else if (notaMedia >= 180 && notaMedia <= 190) {
+            nivelIngles = "Nivel C1";
+        } else {
+            nivelIngles = "No ha obtenido nivel";
+        }
+
+        campoNivel.setText(nivelIngles);
+    }//GEN-LAST:event_botonNotaCamActionPerformed
+
+    private void botonNotaEOIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonNotaEOIActionPerformed
+        // TODO add your handling code here:
+        Double notaListening = (Double) spinerListeningEOI.getValue();
+        Double notaReading = (Double) spinerReadingEOI.getValue();
+        Double notaWriting = (Double) spinerWritingEOI.getValue();
+        Double notaSpeaking = (Double) spinerSpeakingEOI.getValue();
+        Double notaMediation = (Double) spinerMediationEOI.getValue();
+
+        Double notaMedia = (notaListening + notaReading + notaWriting + notaSpeaking + notaMediation) / 5;
+
+        String nivelIngles = "";
+
+        boolean a = radioB1EOI.isSelected();
+        if (a) {
+            if (notaMedia >= 5.0) {
+                nivelIngles = "Nivel B1";
+            } else {
+                nivelIngles = "No obtiene nivel";
+            }
+        } else {
+            if (notaMedia >= 6.0) {
+                nivelIngles = "Nivel B2";
+            } else {
+                nivelIngles = "No obtiene nivel";
+            }
+        }
+
+        campoNivel.setText(nivelIngles);
+    }//GEN-LAST:event_botonNotaEOIActionPerformed
 
     /**
      * @param args the command line arguments
@@ -639,14 +705,14 @@ public class Ej1 extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioB1EOI;
     private javax.swing.JRadioButton radioB2Cam;
     private javax.swing.JRadioButton radioB2EOI;
-    private javax.swing.JSpinner spinerListening;
-    private javax.swing.JSpinner spinerListening1;
-    private javax.swing.JSpinner spinerMediation;
-    private javax.swing.JSpinner spinerReading;
-    private javax.swing.JSpinner spinerReading1;
-    private javax.swing.JSpinner spinerSpeaking;
-    private javax.swing.JSpinner spinerSpeaking1;
-    private javax.swing.JSpinner spinerWriting;
-    private javax.swing.JSpinner spinerWriting1;
+    private javax.swing.JSpinner spinerListeningCam;
+    private javax.swing.JSpinner spinerListeningEOI;
+    private javax.swing.JSpinner spinerMediationEOI;
+    private javax.swing.JSpinner spinerReadingCam;
+    private javax.swing.JSpinner spinerReadingEOI;
+    private javax.swing.JSpinner spinerSpeakingCam;
+    private javax.swing.JSpinner spinerSpeakingEOI;
+    private javax.swing.JSpinner spinerWritingCam;
+    private javax.swing.JSpinner spinerWritingEOI;
     // End of variables declaration//GEN-END:variables
 }

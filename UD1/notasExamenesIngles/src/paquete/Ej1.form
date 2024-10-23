@@ -205,9 +205,9 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           <Component id="botonNotaCam" min="-2" pref="195" max="-2" attributes="0"/>
-                          <EmptySpace pref="54" max="32767" attributes="0"/>
+                          <EmptySpace pref="53" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -220,10 +220,10 @@
                               </Group>
                               <EmptySpace min="54" pref="54" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="spinerWriting" max="32767" attributes="0"/>
-                                  <Component id="spinerSpeaking" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="spinerReading" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="spinerListening" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
+                                  <Component id="spinerWritingCam" max="32767" attributes="0"/>
+                                  <Component id="spinerSpeakingCam" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="spinerReadingCam" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="spinerListeningCam" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="78" max="32767" attributes="0"/>
                           </Group>
@@ -233,31 +233,31 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="191" max="32767" attributes="0"/>
+                          <EmptySpace pref="199" max="32767" attributes="0"/>
                           <Component id="botonNotaCam" min="-2" pref="47" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spinerWriting" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spinerWritingCam" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spinerSpeaking" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spinerSpeakingCam" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spinerReading" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spinerReadingCam" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spinerListening" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spinerListeningCam" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="106" max="32767" attributes="0"/>
                           </Group>
@@ -286,30 +286,33 @@
                     <Property name="text" type="java.lang.String" value="Nota listening"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerWriting">
+                <Component class="javax.swing.JSpinner" name="spinerWritingCam">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerWritingStateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerWritingCamStateChanged"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerSpeaking">
+                <Component class="javax.swing.JSpinner" name="spinerSpeakingCam">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerSpeakingStateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerSpeakingCamStateChanged"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerReading">
+                <Component class="javax.swing.JSpinner" name="spinerReadingCam">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerReadingStateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerReadingCamStateChanged"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerListening">
+                <Component class="javax.swing.JSpinner" name="spinerListeningCam">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerListeningStateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerListeningCamStateChanged"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="botonNotaCam">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Calcular nota"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonNotaCamActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -392,21 +395,21 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="spinerSpeaking1" min="-2" pref="81" max="-2" attributes="0"/>
+                                          <Component id="spinerSpeakingEOI" min="-2" pref="81" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                                          <Component id="spinerMediation" min="-2" pref="81" max="-2" attributes="0"/>
+                                          <Component id="spinerMediationEOI" min="-2" pref="81" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                                   <Component id="botonNotaEOI" min="-2" pref="195" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="64" max="32767" attributes="0"/>
+                          <EmptySpace pref="52" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -418,9 +421,9 @@
                               </Group>
                               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="spinerWriting1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="spinerReading1" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="spinerListening1" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
+                                  <Component id="spinerWritingEOI" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="spinerReadingEOI" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="spinerListeningEOI" alignment="0" min="-2" pref="81" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="78" max="32767" attributes="0"/>
                           </Group>
@@ -433,12 +436,12 @@
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="spinerSpeaking1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinerSpeakingEOI" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="102" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="spinerMediation" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spinerMediationEOI" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Component id="botonNotaEOI" min="-2" pref="47" max="-2" attributes="0"/>
@@ -449,17 +452,17 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spinerWriting1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spinerWritingEOI" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spinerReading1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spinerReadingEOI" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="spinerListening1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="spinerListeningEOI" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="140" max="32767" attributes="0"/>
                           </Group>
@@ -493,40 +496,43 @@
                     <Property name="text" type="java.lang.String" value="Nota mediation"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerWriting1">
+                <Component class="javax.swing.JSpinner" name="spinerWritingEOI">
                   <Properties>
                     <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                       <SpinnerModel initial="0.0" numberType="java.lang.Double" stepSize="1.0" type="number"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerWriting1StateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerWritingEOIStateChanged"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerSpeaking1">
+                <Component class="javax.swing.JSpinner" name="spinerSpeakingEOI">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerSpeaking1StateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerSpeakingEOIStateChanged"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerReading1">
+                <Component class="javax.swing.JSpinner" name="spinerReadingEOI">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerReading1StateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerReadingEOIStateChanged"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerListening1">
+                <Component class="javax.swing.JSpinner" name="spinerListeningEOI">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerListening1StateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerListeningEOIStateChanged"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="spinerMediation">
+                <Component class="javax.swing.JSpinner" name="spinerMediationEOI">
                   <Events>
-                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerMediationStateChanged"/>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="spinerMediationEOIStateChanged"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="botonNotaEOI">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Calcular nota"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonNotaEOIActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
