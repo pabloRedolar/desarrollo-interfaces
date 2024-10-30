@@ -4,6 +4,7 @@
  */
 package paquete;
 
+import java.awt.Frame;
 import javax.swing.SpinnerNumberModel;
 
 /**
@@ -19,6 +20,7 @@ public class Ej1 extends javax.swing.JFrame {
         initComponents();
         panelNotasCam.setVisible(false);
         panelNotasEOI.setVisible(false);
+        
     }
 
     /**
@@ -69,7 +71,10 @@ public class Ej1 extends javax.swing.JFrame {
         botonNotaEOI = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Notas inglés");
+        setLocationByPlatform(true);
         setName("Examenes inglés"); // NOI18N
+        setResizable(false);
 
         jLabel1.setText("Nombre");
 
@@ -443,6 +448,7 @@ public class Ej1 extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void campoNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNombreActionPerformed

@@ -343,13 +343,7 @@ public class frameReserva extends javax.swing.JFrame {
 
     private void fechaFinPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_fechaFinPropertyChange
         // TODO add your handling code here:
-        Date fecha1 = (Date) fechaInicio.getDate();
-        Date fecha2 = (Date) fechaFin.getDate();
-        LocalDate f1 = fecha1.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        LocalDate f2 = fecha2.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-        long dias = ChronoUnit.DAYS.between(f1, f2);
         
-        campoNoches.setText(String.valueOf(dias));
     }//GEN-LAST:event_fechaFinPropertyChange
 
     /**
