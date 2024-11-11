@@ -1,28 +1,17 @@
 package org.iesch.di.hellocontroller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private TextField textFieldNombre;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextField textFieldResultadoNombre;
+
+    @FXML
+    protected void onBtnClick(){
+        textFieldResultadoNombre.setText("Hola " + textFieldNombre.getText());
     }
-
-    @FXML
-    private Button boton1;
-
-    protected void onBoton2onClick(){
-
-    }
-
-    @FXML
-    private Button boton2;
-
-    @FXML
-    private Button boton3;
 }
