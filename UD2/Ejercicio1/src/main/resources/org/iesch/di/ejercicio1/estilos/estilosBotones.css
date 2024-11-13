@@ -1,0 +1,14 @@
+.button {
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color:#2187fc;
+    -fx-border-width: 2.5px;
+    -fx-border-color: white;
+}
+
+.button:hover {
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: linear-gradient(to bottom, #c1f8ff, #2187fc);
+
+}
