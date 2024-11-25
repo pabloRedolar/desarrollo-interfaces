@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesch.di.ejercicio6.HelloController">
+    <Button fx:id="button" layoutX="107.0" layoutY="160.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="144.0" text="Botón">
+        <effect>
+          <Blend />
+        </effect>
+    </Button>
+    <Label fx:id="etiqueta" layoutX="354.0" layoutY="160.0" prefHeight="81.0" prefWidth="144.0" text="Label">
+        <effect>
+          <Blend />
+        </effect>
+    </Label>
+    <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <Menu fx:id="menu" mnemonicParsing="false" text="File">
+            <MenuItem fx:id="menuItem" mnemonicParsing="false" onAction="#setEstilo1" text="Aplicar estilo 1" />
+            <MenuItem fx:id="menuItem1" mnemonicParsing="false" onAction="#setEstilo2" text="Aplicar estilo 2" />
+            <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#reset" text="Quitar estilo" />
+        </Menu>
+    </MenuBar>
+</AnchorPane>
