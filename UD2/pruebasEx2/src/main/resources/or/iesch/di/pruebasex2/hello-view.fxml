@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="or.iesch.di.pruebasex2.JuegoCalculoController"
+          alignment="center" hgap="10" vgap="10" style="-fx-padding: 20;">
+
+   <Label text="Consigue el siguiente número:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+   <TextField fx:id="txtNumeroObjetivo" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+   <Label text="Tu número:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+   <TextField fx:id="txtNumeroUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+   <VBox spacing="10" GridPane.rowIndex="2" GridPane.columnSpan="2">
+      <HBox spacing="10" alignment="center">
+         <Button fx:id="btn1" text="1" onAction="#agregarNumero" />
+         <Button fx:id="btn2" text="2" onAction="#agregarNumero" />
+         <Button fx:id="btn5" text="5" onAction="#agregarNumero" />
+         <Button fx:id="btn7" text="7" onAction="#agregarNumero" />
+      </HBox>
+      <HBox spacing="10" alignment="center">
+         <Button fx:id="btn10" text="10" onAction="#agregarNumero" />
+         <Button fx:id="btn15" text="15" onAction="#agregarNumero" />
+         <Button fx:id="btn20" text="20" onAction="#agregarNumero" />
+         <Button fx:id="btn25" text="25" onAction="#agregarNumero" />
+      </HBox>
+      <HBox spacing="10" alignment="center">
+         <Button fx:id="btn50" text="50" onAction="#agregarNumero" />
+         <Button fx:id="btn60" text="60" onAction="#agregarNumero" />
+         <Button fx:id="btn75" text="75" onAction="#agregarNumero" />
+         <Button fx:id="btn100" text="100" onAction="#agregarNumero" />
+      </HBox>
+   </VBox>
+
+   <HBox spacing="10" alignment="center" GridPane.rowIndex="3" GridPane.columnSpan="2">
+      <Button text="New Game" onAction="#iniciarNuevoJuego" />
+      <Button text="Instrucciones" onAction="#mostrarInstrucciones" />
+   </HBox>
+</GridPane>
