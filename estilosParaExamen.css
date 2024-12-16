@@ -1,3 +1,30 @@
+/* Estilo general para toda la ventana */
+
+.root {
+    -fx-background-color: #f0f0f0; /* Fondo claro para toda la ventana */
+    -fx-padding: 15; /* Margen interno general */
+    -fx-font-family: "Arial"; /* Fuente para toda la ventana */
+    -fx-font-size: 14px; /* Tamaño de texto por defecto */
+    -fx-text-fill: #333333; /* Color del texto por defecto */
+}
+
+.root {
+    -fx-background-color: #2c2c2c; /* Fondo oscuro */
+    -fx-padding: 15;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-text-fill: #e0e0e0; /* Texto claro */
+}
+
+/* Estilos para paneles */
+
+.pane {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Gradiente suave */
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+}
+
 /*Estilos para Menu*/
 
 .menu-bar {
@@ -18,6 +45,25 @@
 
 .menu-item:hover {
     -fx-background-color: #00FF00;
+}
+
+/* Estilos text field y text area*/
+
+.text-field, .text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #4CAF50; /* Cambiar a un verde llamativo */
+    -fx-background-color: #f9f9f9; /* Fondo ligeramente diferente */
+}
+
+.text-field:hover, .text-area:hover {
+    -fx-border-color: #aaaaaa;
 }
 
 /* Estilos CeckBox */
@@ -54,9 +100,19 @@
 
 /*Estilos progress bar*/
 
-.progress-bar .track {
+.progress-bar {
+    -fx-accent: #4caf50; /* Cambiar color de barra */
+    -fx-background-color: #e0e0e0; /* Fondo claro */
+    -fx-background-radius: 5px;
+    -fx-padding: 3px;
 }
+
+.progress-bar .track {
+    -fx-background-color: linear-gradient(to bottom, #c8e6c9, #a5d6a7); /* Gradiente claro */
+}
+
 .progress-bar .bar {
+    -fx-background-color: linear-gradient(to bottom, #66bb6a, #43a047); /* Verde intenso */
 }
 
 /*Progress indicator*/
