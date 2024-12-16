@@ -1,0 +1,29 @@
+.toggle-button {
+    -fx-text-fill: white;
+    -fx-background-color: blue;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+}
+
+.toggle-button:selected {
+    -fx-text-fill: white;
+    -fx-background-color: red;
+}
+
+.label {
+    -fx-font-family: Tahoma;
+    -fx-font-size: 14px;
+
+}
+
+.label:hover{
+    -fx-background-color: aqua;
+}
+
+.radio-button .radio {
+    -fx-color: green;
+}
+
+.radio-button .dot {
+    -fx-background-color: red;
+}

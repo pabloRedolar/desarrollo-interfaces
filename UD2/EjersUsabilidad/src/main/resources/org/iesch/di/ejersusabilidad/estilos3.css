@@ -1,0 +1,46 @@
+.check-box .box {
+    -fx-color: #FF0000;
+}
+.check-box:selected .mark {
+    -tx-color: aqua;
+
+}
+.check-box:selected .box {
+    -fx-color: blueviolet;
+}
+
+.radio-button .radio {
+    -fx-color: chartreuse;
+}
+.radio-button:selected .radio {
+    -fx-color: violet;
+}
+.radio-button:selected .dot {
+    -fx-color: #ff00d4;
+}
+
+.slider .track {
+    -fx-color: #fbff00;
+}
+.slider .thumb {
+    -fx-color: aquamarine;
+}
+
+.toggle-button {
+    -fx-color: tomato;
+
+}
+.toggle-button:selected {
+    -fx-color: #fbff00;
+}
+
+.progress-bar .track {
+    -fx-color: blue;
+}
+.progress-bar .bar {
+    -fx-color: chocolate;
+}
+
+.progress-indicator {
+-fx-progress-color: #FF0000;
+}

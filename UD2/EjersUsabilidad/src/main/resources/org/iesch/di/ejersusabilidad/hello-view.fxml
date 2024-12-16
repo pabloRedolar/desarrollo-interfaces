@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesch.di.ejersusabilidad.HelloController">
+   <children>
+      <Label layoutX="78.0" layoutY="64.0" text="Selecciona un estilo" />
+      <ComboBox fx:id="comboBox" layoutX="189.0" layoutY="60.0" onAction="#cambiarEstilos" prefWidth="150.0" />
+      <CheckBox fx:id="checkBox" layoutX="78.0" layoutY="134.0" mnemonicParsing="false" text="CheckBox" />
+      <RadioButton fx:id="radioButton" layoutX="228.0" layoutY="134.0" mnemonicParsing="false" text="RadioButton" />
+      <Slider layoutX="78.0" layoutY="200.0" />
+      <ToggleButton layoutX="256.0" layoutY="195.0" mnemonicParsing="false" text="ToggleButton" />
+      <ProgressIndicator layoutX="78.0" layoutY="240.0" prefHeight="41.0" prefWidth="37.0" progress="0.0" />
+      <ProgressBar layoutX="156.0" layoutY="251.0" prefWidth="200.0" progress="0.0" />
+   </children>
+</AnchorPane>

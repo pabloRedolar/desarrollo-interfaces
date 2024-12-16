@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="311.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesch.di.togglebuttonscolors.HelloController">
+   <children>
+      <ToggleButton fx:id="btnRojo" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" text="Rojo">
+         <toggleGroup>
+            <ToggleGroup fx:id="colores" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="btnAzul" layoutX="157.0" layoutY="67.0" mnemonicParsing="false" text="Azul" toggleGroup="$colores" />
+      <ToggleButton fx:id="btnVerde" layoutX="99.0" layoutY="67.0" mnemonicParsing="false" text="Verde" toggleGroup="$colores" />
+      <ToggleButton fx:id="btnVerdana" layoutX="45.0" layoutY="150.0" mnemonicParsing="false" text="Verdana">
+         <toggleGroup>
+            <ToggleGroup fx:id="fuentes" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="btnTahoma" layoutX="119.0" layoutY="150.0" mnemonicParsing="false" text="Tahoma" toggleGroup="$fuentes" />
+      <ToggleButton fx:id="btnCourrier" layoutX="193.0" layoutY="150.0" mnemonicParsing="false" text="Courrier" toggleGroup="$fuentes" />
+      <ToggleButton fx:id="btn10" layoutX="42.0" layoutY="227.0" mnemonicParsing="false" text="10">
+         <toggleGroup>
+            <ToggleGroup fx:id="letra" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton fx:id="btn20" layoutX="82.0" layoutY="227.0" mnemonicParsing="false" text="20" toggleGroup="$letra" />
+      <ToggleButton fx:id="btn30" layoutX="122.0" layoutY="227.0" mnemonicParsing="false" text="30" toggleGroup="$letra" />
+      <Label layoutX="32.0" layoutY="28.0" text="Color de fondo" />
+      <Label layoutX="32.0" layoutY="115.0" text="Tipo de letra" />
+      <Label layoutX="32.0" layoutY="192.0" text="Tamaño de texto" />
+      <Label fx:id="labelLorem" layoutX="300.0" layoutY="37.0" prefHeight="229.0" prefWidth="273.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor nulla vel metus venenatis, non finibus dolor viverra. Cras ac libero auctor, sodales ligula quis, porta urna. Mauris sagittis metus accumsan, vestibulum mi eu, pretium odio. Nam scelerisque viverra augue, non eleifend magna mattis vel. Phasellus posuere felis quis neque iaculis, id tristique odio molestie. Integer sit amet vehicula quam. Integer justo tortor, accumsan et enim at, maximus iaculis nisl. Nam eu pretium mi. Nulla vestibulum euismod risus sed aliquet. Mauris vitae iaculis leo, eget pulvinar neque. Fusce volutpat ultrices sapien, ac facilisis ipsum commodo at. " wrapText="true" />
+   </children>
+</AnchorPane>
