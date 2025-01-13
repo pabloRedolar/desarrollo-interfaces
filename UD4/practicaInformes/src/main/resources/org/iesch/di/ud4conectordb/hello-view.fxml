@@ -7,17 +7,28 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesch.di.ud4conectordb.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesch.di.ud4conectordb.HelloController">
    <children>
       <TextField layoutX="201.0" layoutY="46.0" />
       <Button layoutX="384.0" layoutY="46.0" mnemonicParsing="false" text="Button" />
       <Label layoutX="24.0" layoutY="50.0" prefHeight="17.0" prefWidth="149.0" text="Selecciona una localidad:" />
-      <TableView layoutX="86.0" layoutY="124.0" prefHeight="255.0" prefWidth="380.0">
+      <TableView layoutX="86.0" layoutY="90.0" prefHeight="255.0" prefWidth="380.0">
          <columns>
             <TableColumn prefWidth="75.0" text="Nombre" />
             <TableColumn prefWidth="75.0" text="Apellidos" />
             <TableColumn prefWidth="75.0" text="Localidad" />
          </columns>
       </TableView>
+      <Button fx:id="botonCrearReporte" layoutX="232.0" layoutY="376.0" mnemonicParsing="false" onAction="#crearInforme" text="Crear reporte" />
+      <Label layoutX="531.0" layoutY="50.0" text="Nombre" />
+      <TextField fx:id="textFieldNombre" layoutX="610.0" layoutY="46.0" />
+      <Label layoutX="531.0" layoutY="82.0" text="Apellidos" />
+      <TextField fx:id="textFieldApellidos" layoutX="610.0" layoutY="78.0" />
+      <TextField fx:id="textFieldLocalidad" layoutX="610.0" layoutY="110.0" />
+      <Label layoutX="531.0" layoutY="114.0" text="Localidad" />
+      <Button fx:id="botonAtrasTodos" layoutX="610.0" layoutY="153.0" mnemonicParsing="false" onAction="#atrasTodos" text="&lt;&lt;" />
+      <Button fx:id="botonAtrasUno" layoutX="653.0" layoutY="153.0" mnemonicParsing="false" onAction="#atrasUno" text="&lt;" />
+      <Button fx:id="botonDelanteUno" layoutX="693.0" layoutY="153.0" mnemonicParsing="false" onAction="#delanteUno" text="&gt;" />
+      <Button fx:id="botonDelanteTodos" layoutX="726.0" layoutY="153.0" mnemonicParsing="false" onAction="#delanteTodos" text="&gt;&gt;" />
    </children>
 </AnchorPane>

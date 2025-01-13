@@ -3,12 +3,16 @@ package org.iesch.di.ud4conectordb;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.sql.*;
+import java.util.HashMap;
 
 public class HelloController {
 
     ResultSet rs;
+    Connection con;
 
     @FXML
     private TextField textFieldNombre;
@@ -24,6 +28,8 @@ public class HelloController {
     private Button botonDelanteUno;
     @FXML
     private Button botonDelanteTodos;
+    @FXML
+    private Button botonCrearReporte;
 
     @FXML
     void initialize() {
@@ -32,7 +38,7 @@ public class HelloController {
             String user = "root";
             String clave = "";
 
-            Connection con = DriverManager.getConnection(url, user, clave);
+            con = DriverManager.getConnection(url, user, clave);
             Statement stat = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             String sql = "select * from datos.empleados";
 
@@ -105,5 +111,21 @@ public class HelloController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+
+    @FXML
+    private void crearInforme() {
+        try {
+            HashMap parametro = new HashMap();
+            parametro.put("","");
+            JasperReport reporte = JasperCompileManager.compileReport("Informes/Informe_1.jrxml");
+            JasperPrint jasperPrint = JasperFillManager.fillReport(reporte, parametro, con);
+            JasperViewer view = new JasperViewer(jasperPrint,false);
+            view.setVisible(true);
+        } catch (JRException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
