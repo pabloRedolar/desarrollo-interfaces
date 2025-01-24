@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesch.di.ejercicio_tabla.HelloController">
+   <children>
+      <Button fx:id="button" layoutX="74.0" layoutY="62.0" mnemonicParsing="false" onAction="#crearTabla" prefHeight="277.0" prefWidth="453.0" text="BOTON" textFill="RED">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
