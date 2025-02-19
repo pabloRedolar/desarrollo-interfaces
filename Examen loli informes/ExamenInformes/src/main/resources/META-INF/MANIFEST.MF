@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: batik-awt-util-1.17.jar batik-css-1.17.jar commons-collectio
+ ns-3.2.2.jar batik-util-1.17.jar batik-i18n-1.17.jar mysql-connector-j-
+ 9.2.0.jar jasperreports-7.0.1.jar batik-xml-1.17.jar batik-shared-resou
+ rces-1.17.jar jasperreports-charts-7.0.1.jar javafx-controls-17.0.6-win
+ .jar javafx-graphics-17.0.6-win.jar commons-logging-1.3.0.jar batik-par
+ ser-1.17.jar xml-apis-ext-1.3.04.jar jackson-databind-2.17.1.jar javafx
+ -graphics-17.0.6.jar javafx-base-17.0.6-win.jar woodstox-core-6.6.2.jar
+  batik-dom-1.17.jar commons-collections4-4.4.jar javafx-fxml-17.0.6.jar
+  batik-anim-1.17.jar batik-ext-1.17.jar batik-svg-dom-1.17.jar javafx-b
+ ase-17.0.6.jar jackson-annotations-2.17.1.jar commons-io-2.11.0.jar bat
+ ik-gvt-1.17.jar commons-beanutils-1.9.4.jar javafx-controls-17.0.6.jar 
+ stax2-api-4.2.2.jar batik-constants-1.17.jar batik-script-1.17.jar jack
+ son-dataformat-xml-2.17.1.jar batik-bridge-1.17.jar jfreechart-1.5.4.ja
+ r javafx-fxml-17.0.6-win.jar jackson-core-2.18.2.jar protobuf-java-4.29
+ .0.jar xmlgraphics-commons-2.9.jar batik-svggen-1.17.jar
+
