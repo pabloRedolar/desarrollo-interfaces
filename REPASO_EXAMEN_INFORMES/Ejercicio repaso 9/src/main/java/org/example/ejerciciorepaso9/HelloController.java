@@ -33,7 +33,8 @@ public class HelloController {
             con = DriverManager.getConnection(url, user, clave);
             Statement stat = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                     ResultSet.CONCUR_READ_ONLY);
-            String sql = "select Categoría from ventas.ventas group by Categoría";
+
+            String sql = "select DISTINCT Categoría from ventas.ventas";
             ResultSet rs = stat.executeQuery(sql);
 
             while (rs.next()) {
@@ -47,14 +48,10 @@ public class HelloController {
     }
 
     @FXML
-    public void mcCombo() {
+    public void mostrarInforme() throws JRException {
         param = new HashMap<>();
         param.put("category", comboBox.getValue());
-        System.out.println(param);
-    }
 
-    @FXML
-    public void mostrarInforme() throws JRException {
         String fileRepo = "informes/Ejercicio repaso 9.jasper";
         JasperPrint jpRepo = JasperFillManager.fillReport(fileRepo, param, con);
         JasperViewer viewer = new JasperViewer(jpRepo, false);

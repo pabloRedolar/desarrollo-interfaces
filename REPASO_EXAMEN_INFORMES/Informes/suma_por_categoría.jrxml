@@ -1,0 +1,81 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="suma_por_categoría" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="94d69d8c-e6ac-431f-b9c8-0bf9ac95080a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Ventas Adapter"/>
+	<query language="SQL"><![CDATA[select * from ventas]]></query>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="Categoría" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Categoría"/>
+		<property name="com.jaspersoft.studio.field.label" value="Categoría"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="PrecioUnidad" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="CantidadVendida" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.label" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<sortField name="Categoría"/>
+	<variable name="sumaCantidad" resetType="Group" calculation="Sum" resetGroup="Group2" class="java.lang.Integer">
+		<expression><![CDATA[$F{CantidadVendida}]]></expression>
+	</variable>
+	<variable name="Variable_1" class="java.lang.Double">
+		<expression><![CDATA[$F{PrecioUnidad} * $F{CantidadVendida}]]></expression>
+	</variable>
+	<group name="Group1"/>
+	<group name="Group2">
+		<expression><![CDATA[$F{Categoría}]]></expression>
+		<groupHeader>
+			<band height="43">
+				<element kind="textField" uuid="3fb3ea60-9fb1-470c-8c6f-3961327b07a3" x="30" y="10" width="100" height="30">
+					<expression><![CDATA[$F{Categoría}]]></expression>
+				</element>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="32">
+				<element kind="textField" uuid="85e3aa92-6b20-4c9d-a10f-dc2b38f1c8ec" x="410" y="0" width="100" height="30">
+					<expression><![CDATA[$V{sumaCantidad}]]></expression>
+				</element>
+			</band>
+		</groupFooter>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="69" splitType="Stretch">
+		<element kind="staticText" uuid="27366d2f-3a36-4729-8ac9-25b02d15eb36" x="290" y="30" width="100" height="30">
+			<text><![CDATA[PrecioUnidad]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae5afc60-e442-4a47-978a-193eb1e32b46"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<element kind="textField" uuid="d6c9f7cf-84be-4632-b387-18bd7cc0dc38" x="30" y="0" width="100" height="30">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c9082958-3d45-4f91-8e32-a1c5f20e97e1"/>
+			</element>
+			<element kind="textField" uuid="530e3525-4f2b-485a-90f2-1a71432fe492" x="180" y="0" width="100" height="30">
+				<expression><![CDATA[$F{CantidadVendida}]]></expression>
+			</element>
+			<element kind="textField" uuid="d744cb94-2fac-4bca-87eb-746bbb6d9f3d" x="410" y="0" width="100" height="30" pattern="#,##0.00¤;(#,##0.00) ¤">
+				<expression><![CDATA[$V{Variable_1}]]></expression>
+			</element>
+			<element kind="textField" uuid="1c48be92-e91c-47a6-a3bd-e83065de6af2" x="290" y="0" width="100" height="30" pattern="#,##0.00¤;(#,##0.00) ¤">
+				<expression><![CDATA[$F{PrecioUnidad}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae5afc60-e442-4a47-978a-193eb1e32b46"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

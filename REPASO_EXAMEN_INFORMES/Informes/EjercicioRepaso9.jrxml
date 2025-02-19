@@ -1,0 +1,58 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Ejercicio repaso 9" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="665b6793-2953-42bf-8306-1c0b81e08b55">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Ventas Adapter"/>
+	<parameter name="category" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{category}]]></defaultValueExpression>
+	</parameter>
+	<query language="SQL"><![CDATA[SELECT *
+FROM ventas
+WHERE 
+	 ventas.`Categoría` = $P{category}]]></query>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="Categoría" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Categoría"/>
+		<property name="com.jaspersoft.studio.field.label" value="Categoría"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="PrecioUnidad" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="CantidadVendida" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.label" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<group name="Group1">
+		<expression><![CDATA[$F{Categoría}]]></expression>
+		<groupHeader>
+			<band height="56">
+				<element kind="textField" uuid="081dcd2e-8dc3-49e1-a05d-e6ad3805aff1" x="230" y="13" width="100" height="30">
+					<expression><![CDATA[$F{Categoría}]]></expression>
+				</element>
+			</band>
+		</groupHeader>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<summary height="290" splitType="Stretch">
+		<element kind="chart" chartType="pie" uuid="c894c793-37a4-4da3-9743-a9fdd8905e9e" x="0" y="1" width="544" height="289" evaluationTime="Report">
+			<dataset kind="pie" resetType="Report">
+				<series>
+					<keyExpression><![CDATA[$F{Nombre}]]></keyExpression>
+					<valueExpression><![CDATA[$F{CantidadVendida}]]></valueExpression>
+				</series>
+			</dataset>
+			<plot>
+				<itemLabel/>
+			</plot>
+		</element>
+	</summary>
+</jasperReport>

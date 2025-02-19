@@ -1,0 +1,73 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="ventas_Max_Min" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d68273d2-7453-4269-bb70-6266dc0bc249">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Ventas Adapter"/>
+	<parameter name="minimo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{minimo}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="maximo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[$P{maximo}]]></defaultValueExpression>
+	</parameter>
+	<query language="SQL"><![CDATA[select * from ventas where CantidadVendida >= $P{minimo}
+and CantidadVendida <= $P{maximo}]]></query>
+	<field name="Nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="Categoría" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Categoría"/>
+		<property name="com.jaspersoft.studio.field.label" value="Categoría"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="PrecioUnidad" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="PrecioUnidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<field name="CantidadVendida" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.label" value="CantidadVendida"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ventas"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="117" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="38" splitType="Stretch">
+		<element kind="staticText" uuid="eb4ac33b-44ba-47dd-98c8-d7c591ab13d2" x="87" y="0" width="100" height="30">
+			<text><![CDATA[Nombre]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28acdcb1-f420-48b3-9c8b-89510d723a3e"/>
+		</element>
+		<element kind="staticText" uuid="7c999768-8353-47a3-b33a-c15fa8f965c2" x="210" y="0" width="100" height="30">
+			<text><![CDATA[CantidadVendida]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="18ebb6f3-fb38-4ea7-8ed9-90de2b7440bb"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<element kind="textField" uuid="89109738-dcc9-4698-b67f-cf4b9002ffc1" x="87" y="10" width="100" height="30">
+				<expression><![CDATA[$F{Nombre}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="28acdcb1-f420-48b3-9c8b-89510d723a3e"/>
+			</element>
+			<element kind="textField" uuid="2c4d45c4-41f0-4dfe-97f7-6c27740ba49f" x="210" y="10" width="100" height="30">
+				<expression><![CDATA[$F{CantidadVendida}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="18ebb6f3-fb38-4ea7-8ed9-90de2b7440bb"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="10" splitType="Stretch"/>
+	<pageFooter height="9" splitType="Stretch"/>
+	<summary height="221" splitType="Stretch">
+		<element kind="chart" chartType="pie" uuid="8bbf8233-1c36-4153-89a1-8af6e36e36c1" x="80" y="10" width="380" height="211" evaluationTime="Report">
+			<dataset kind="pie" resetType="Report">
+				<series>
+					<keyExpression><![CDATA[$F{Nombre}]]></keyExpression>
+					<valueExpression><![CDATA[$F{CantidadVendida}]]></valueExpression>
+				</series>
+			</dataset>
+			<plot>
+				<itemLabel/>
+			</plot>
+		</element>
+	</summary>
+</jasperReport>
