@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: org.iesch.di.ejerciciocalculoimc.Launcher
+Class-Path: javafx-controls-22.0.1-win.jar javafx-controls-22.0.1.jar ja
+ vafx-graphics-22.0.1-win.jar javafx-base-22.0.1.jar javafx-base-22.0.1-
+ win.jar javafx-fxml-22.0.1.jar javafx-fxml-22.0.1-win.jar javafx-graphi
+ cs-22.0.1.jar
+
